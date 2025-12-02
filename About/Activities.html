@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Activities</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #222;
+    }
+
+    /* PAGE TITLE */
+    h1 {
+      font-family: "Pacifico";
+      font-size: 60px;
+      color: #2a47d6;
+      text-align: center;
+      margin: 50px 0 20px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 50px;
+    }
+
+    /* ACTIVITIES SECTION */
+    .activity-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      width: 80%;
+      margin: 0 auto 150px auto;
+      flex-wrap: wrap;
+    }
+
+    .activity-section.reverse {
+      flex-direction: row-reverse; /* alternate layout */
+    }
+
+    .activity-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .activity-text h3 {
+      font-family: "Pacifico";
+      font-size: 32px;
+      color: #2a47d6;
+      margin-bottom: 20px;
+    }
+
+    .activity-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Yellow Card for Image */
+    .activity-img {
+      flex: 1;
+      background: #ffb700; /* yellow card */
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* keeps rounded corners neat */
+    }
+
+    .activity-img video {
+      width: 400px;
+      height: 450px;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .activity-img img{
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .activity-img img:hover,
+    .activity-img video:hover {
+      transform: scale(1.03); /* subtle zoom on hover */
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .activity-section,
+      .activity-section.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+      .activity-text h3 { margin-top: 20px; }
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-left: 50px;
+      margin-bottom: 50px;
+      text-decoration: none;
+      background: #ffb700;
+      color: black;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My Activities</h1>
+  <p class="subtitle">What I enjoy doing in my free time</p>
+
+  <!-- SKATING -->
+  <section class="activity-section">
+    <div class="activity-text">
+      <h3>Skating</h3>
+      <p>I enjoy skating as it helps me stay active and improves balance. I often go to skate parks to practice tricks and meet fellow skaters.</p>
+    </div>
+    <div class="activity-img">
+      <video controls>
+        <source src="../Sources/skating.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- GYM -->
+  <section class="activity-section reverse">
+    <div class="activity-text">
+      <h3>Working Out</h3>
+      <p>Going to the gym keeps me fit and healthy. I focus on strength training and cardio to maintain a balanced workout routine.</p>
+    </br>
+      <p>Greatest achivement for me is the 100kg bench pr. My goal since i started working out</p>
+    </div>
+    <div class="activity-img">
+      <video controls>
+        <source src="../Sources/100kg.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- GAMING -->
+  <section class="activity-section">
+    <div class="activity-text">
+      <h3>Gaming</h3>
+      <p>Gaming allows me to relax and challenge my mind. I enjoy playing strategy and action games in my free time.</p>
+      <br>
+      <p>Favourite Game:<strong> RDR2</strong>, such a good game</p>
+    </div>
+    <div class="activity-img">
+      <img src="../Sources/RDR2.jpg" alt="Gaming">
+    </div>
+  </section>
+
+    <section class="activity-section reverse">
+    <div class="activity-text">
+      <h3>Football</h3>
+      <p>Football has always been my go to sports since I was 5, my childhood sports to now. Teaches me how to communicate collaborate with others. I dont just play I watch football too, Favouriteteam has alwaysbeen Manchester United.</p>
+    </div>
+    <div class="activity-img">
+      <video controls>
+        <source src="../Sources/football.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+
+  <!-- Bouldering -->
+    <section class="activity-section">
+    <div class="activity-text">
+      <h3>Bourdering</h3>
+      <p>A new sports I tried doing and abosulutely loving it is bouldering. The feeling of failing the climb and keep trying until you suceed is such a satifaying sweet moment</p>
+      <br>
+      <p>Feeling accomplished after suceeding the climb is the same feeling when you are down and you climb back up!</p>
+    </div>
+    <div class="activity-img">
+      <video controls>
+        <source src="../Sources/Bouldering.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+
+  <!-- Football -->
+
+
+  <a href="../about.html" class="back-btn">Back to About Me</a>
+</body>
+</html>

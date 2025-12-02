@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET & BODY */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Poppins", sans-serif; background: #ffffff; color: #222; }
+
+    /* NAVIGATION */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 70px;
+      border-bottom: 1px solid #e3e3e3;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+    nav img { width: 55px; }
+    nav a {
+      text-decoration: none;
+      margin-left: 35px;
+      color: #2a47d6;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    /* PORTFOLIO HEADER */
+      .portfolio-header {
+    display: flex;
+    justify-content: flex-end; /* title on the right */
+    padding-right: 120px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header {
+    font-family: "Pacifico";
+    font-size: 50px;
+    color: #2a47d6;
+    font-weight: 40;
+    margin-bottom: 10px;
+    text-align: right;  /* title on the right */
+    width: 380px;       /* optional for consistent width */
+  }
+
+  .sub-header {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center; /* subtitle centered */
+    width: 100%;        /* span full width for centering */
+  }
+    /* FILTER BUTTONS */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .filters button {
+      padding: 14px 30px;
+      border-radius: 25px;
+      border: none;
+      background: #ffb700;
+      cursor: pointer;
+      font-size: 20px;
+      min-width: 150px;
+      transition: transform 0.2s ease;
+    }
+    .filters button:hover { transform: scale(1.05); }
+
+    /* PROJECT GRID */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      width: 80%;
+      margin: 50px auto 80px auto;
+    }
+    .project-card {
+      background: #2a47d6;
+      border-radius: 35px;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 420px;
+      box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+    .project-card:hover { transform: scale(1.03); }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+    .project-card h4 {
+      margin: 15px 0 5px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .project-card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .project-card button {
+      background: #ffb700;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      color: black;
+      margin-top: 10px;
+      align-self: center;
+      transition: transform 0.2s ease;
+    }
+    .project-card button:hover { transform: scale(1.05); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { 
+      .project-grid { grid-template-columns: 1fr; } 
+      .portfolio-header h1, .portfolio-header p { text-align: center; width: 100%; }
+      .portfolio-header { justify-content: center; padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <img src="Sources/logo.png" alt="Logo" />
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PORTFOLIO HEADER -->
+
+  <div class="portfolio-header">
+    <div class="header">Portfolio</div>
+  </div>
+    <div class="sub-header">My projects</div>
+
+
+  <!-- FILTER BUTTONS -->
+<div class="filters"> 
+  <button onclick="filterProjects('web')">Web Development</button>
+  <button onclick="filterProjects('design')">Design</button>
+  <button onclick="filterProjects('immersive')">Immersive Technologies</button>
+  <button onclick="filterProjects('mobile')">Mobile App Development</button>
+  <button onclick="filterProjects('all')">Show All</button>
+</div>
+
+
+  <!-- PROJECT GRID -->
+   <section class="project-grid">
+
+  <div class="project-card" data-category="web">
+    <img src="Sources/lo-fi.png">
+    <h4>UI UX for portfolio website</h4>
+    <p>Description: Making Hi-fi and lo-fi wireframe...</p>
+    <button onclick="window.location.href='Projects/WebAppPortfolio.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="design">
+    <img src="Sources/banner.png">
+    <h4>Travelly Digital Banner</h4>
+    <p>Description: Designed a digital banner...</p>
+    <button onclick="window.location.href='Projects/TravelyBanner.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="design">
+    <img src="Sources/instagramgrid.png">
+    <h4>Travelly Instagram Grid</h4>
+    <p>Description: Created Instagram visuals...</p>
+    <button onclick="window.location.href='Projects/TravellyInstagram.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="immersive">
+    <img src="Sources/VR.png">
+    <h4>VR Escape Room</h4>
+    <p>Description: Designed and developed a VR escape room...</p>
+    <button onclick="window.location.href='Projects/VrEscapeRoom.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="mobile">
+    <img src="Sources/MAD (1).png">
+    <h4>Mobile App Development</h4>
+    <p>Description: Built a sectionList function app...</p>
+    <button onclick="window.location.href='Projects/TopMarvelMovies.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="immersive">
+    <img src="Sources/Ar card.png">
+    <h4>AR Spaceship Card</h4>
+    <p>Description: Designed & built an AR spaceship card...</p>
+    <button onclick="window.location.href='Projects/ArCard.html'">More info</button>
+  </div>
+
+</section>
+
+<script>
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+
+      if (category === "all" || cardCategory === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+
+</body>
+</html>

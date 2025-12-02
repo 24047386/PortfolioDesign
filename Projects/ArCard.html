@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px;
+      background: #ffb700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Section title */
+    h2.section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-top: 40px;
+      font-family: "Pacifico";
+      color: #2a47d6;
+    }
+
+    /* Carousel */
+    .carousel {
+      max-width: 900px;
+      margin: 30px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Slides */
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img,
+    .slide video {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #f3f3f3;
+    }
+
+    /* Arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Description */
+    .project-details {
+      max-width: 900px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px auto 60px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .project-details h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .project-details p {
+      line-height: 1.6;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="../portfolio.html" class="back-btn">← Back</a>
+
+  <!-- Page Title -->
+  <h2 class="section-title">Project Showcase</h2>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <div class="slide active">
+      <img src="../Sources/sketch1.png" alt="Slide 1">
+    </div>
+
+    <div class="slide">
+      <img src="../Sources/sketch2.png" alt="Slide 2">
+    </div>
+
+    <div class="slide">
+      <img src="../Sources/sketch3.png" alt="Slide 3">
+    </div>
+
+    <div class="slide">
+      <img src="../Sources/targetImage.png" alt="Slide 4">
+    </div>
+
+    <div class="slide">
+      <video controls>
+        <source src="../Sources/AR_CA1projectDemo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Arrows -->
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+
+  <!-- Description -->
+<div class="project-details">
+  <h3>About This Project</h3>
+
+  <p><strong>Technology Used:</strong><br>
+    • Unity Engine<br>
+    • Vuforia (for AR tracking)<br>
+  </p>
+
+  <p><strong>Features:</strong><br>
+    • AR marker detection to spawn 3D objects<br>
+    • Smooth animation and interaction with the AR model<br>
+    • Clean and modern UI layout<br>
+  </p>
+
+  <p><strong>Target Audience:</strong><br>
+    • Students exploring AR basics<br>
+    • Educators needing simple AR demos<br>
+    • Anyone interested in interactive 3D experiences
+  </p>
+
+  <p><strong>Challenges Faced:</strong><br>
+    • Adjusting object scaling so it fits the real-world marker<br>
+    • Lighting differences causing unstable AR tracking<br>
+    • Making the UI clean and easy to understand<br>
+  </p>
+</div>
+
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel .slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #222;
+}
+
+h1 {
+  font-family: "Pacifico";
+  font-size: 50px;
+  color: #2a47d6;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 40;
+}
+
+.work-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 120px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.work-text {
+  width: 45%;
+  min-width: 300px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.yellow-card {
+  background: #ffb700;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.yellow-card img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.reviews-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 120px 80px 120px;
+  flex-wrap: wrap;
+}
+
+.reviews-container {
+  background: #ffb700;
+  padding: 20px;
+  border-radius: 25px;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+}
+
+/* carousel common styles */
+.carousel, .carousel2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.carousel-track, .carousel2-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img, .carousel2-track img {
+  width: 100%;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.carousel button, .carousel2 button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.carousel .prev, .carousel2 .prev { left: 10px; }
+.carousel .next, .carousel2 .next { right: 10px; }
+
+/* Mobile responsive */
+@media(max-width: 900px) {
+  .work-section { padding: 40px 20px; flex-direction: column; }
+  .reviews-row { padding: 20px; }
+  .work-text, .yellow-card, .reviews-container { width: 100%; }
+}
+
+.back-btn {
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  text-decoration: none;
+  background: #ffb700;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+ }
+</style>
+</head>
+<body>
+
+<h1>Work Experience</h1>
+
+<!-- DECATHLON -->
+<section class="work-section">
+  <div class="work-text">
+    <h2 style="font-family:Pacifico; color:#2a47d6; font-size:36px; font-weight: 40;">Decathlon · Retail Sales Specialist</h2>
+    <p>Sep 2024 - Present</p>
+    <p>
+      • Provided customer service and assisted customers with product inquiries.<br>
+      • Resolved customer questions and gave accurate product information.<br>
+      • Contributed to the department achieving its sales target of $100K, the highest sales milestone.
+    </p>
+  </div>
+
+  <div class="yellow-card">
+    <p>My Mountain Department Teammates</p>
+    <img src="../Sources/Mountain.jpg">
+  </div>
+</section>
+
+<!-- REVIEWS + TIKTOK ROW -->
+<div class="reviews-row">
+
+  <div class="reviews-container">
+    <p>Reviews from customers</p>
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+      <div class="carousel-track">
+        <img src="../Sources/Reviews3.png">
+        <img src="../Sources/Reviews1 (1).png">
+        <img src="../Sources/Reviews2.png">
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="reviews-container">
+    <p>Digital Marketing - TikTok & Instagram posts</p>
+    <div class="carousel2">
+      <button class="prev">&#10094;</button>
+      <div class="carousel2-track">
+        <img src="../Sources/tiktok.png" width="100%">
+        <img src="../Sources/tiktok2.png" width=100% height=400>
+        <img src="../Sources/tiktok3.jpg" width=100% height=400>
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+</div> <!-- close reviews-row -->
+
+<!-- ROCKBELL -->
+<section class="work-section" style="flex-direction: row-reverse;">
+  <div class="work-text">
+    <h2 style="font-family:Pacifico; color:#2a47d6; font-size:36px; font-weight: 40;">Rockbell · Software Support Intern</h2>
+    <p>Apr 2023 - Sep 2023</p>
+    <p>
+      • Provided customer support for the company’s accounting software.<br>
+      • Assisted in troubleshooting and resolving customer issues and inquiries.<br>
+      • Contributed to Rockbell's 5-star rating on Trustindex based on customer reviews.
+    </p>
+  </div>
+
+  <div class="yellow-card">
+    <img src="../Sources/rockbell.jpg">
+  </div>
+</section>
+
+<a href="../about.html" class="back-btn">Back to About Me</a>
+
+<script>
+// First carousel
+const track1 = document.querySelector(".carousel-track");
+const prev1 = document.querySelector(".carousel .prev");
+const next1 = document.querySelector(".carousel .next");
+let index1 = 0;
+next1.onclick = () => { index1 = (index1 + 1) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
+prev1.onclick = () => { index1 = (index1 - 1 + track1.children.length) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
+
+// Second carousel
+const track2 = document.querySelector(".carousel2-track");
+const prev2 = document.querySelector(".carousel2 .prev");
+const next2 = document.querySelector(".carousel2 .next");
+let index2 = 0;
+next2.onclick = () => { index2 = (index2 + 1) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
+prev2.onclick = () => { index2 = (index2 - 1 + track2.children.length) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
+</script>
+
+</body>
+</html>

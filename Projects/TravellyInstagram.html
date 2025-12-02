@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px;
+      background: #ffb700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Title */
+    h2.section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-top: 20px;
+      font-family: "Pacifico";
+      color: #2a47d6;
+    }
+
+    /* Carousel box */
+    .carousel {
+      max-width: 900px;
+      margin: 30px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Images */
+    .carousel img {
+      width: 100%;
+      height: 350px;       /* Shorter height */
+      display: none;
+      object-fit: contain; /* Prevent cropping */
+      background: #f5f5f5;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    /* Arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Description box */
+    .project-details {
+      max-width: 900px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px auto 60px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .project-details h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .project-details p {
+      line-height: 1.6;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="../portfolio.html" class="back-btn">← Back</a>
+
+  <!-- Page Title -->
+  <h2 class="section-title">Instagram Grid Project</h2>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <img src="../Sources/instagramgrid.png" class="active" alt="Banner Image">
+
+  </div>
+
+  <!-- Description -->
+  <div class="project-details">
+    <h3>About This Project</h3>
+
+    <p><strong>Technology Used:</strong><br>
+      Photoshop
+    </p>
+
+    <p><strong>Features:</strong><br>
+      • Clean layout<br>
+      • Consistent visual theme<br>
+      • Optimized Instagram-ready grid
+    </p>
+
+    <p><strong>Target Audience:</strong><br>
+      Young adults, lifestyle brands, social media campaigns, Travelly
+    </p>
+
+    <p><strong>Challenges Faced:</strong><br>
+      Maintaining consistency across all grid tiles
+    </p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function showSlide(index) {
+      slides.forEach(img => img.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      showSlide(slideIndex);
+    }
+  </script>
+
+</body>
+</html>

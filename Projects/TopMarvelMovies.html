@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px;
+      background: #ffb700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Section title */
+    h2.section-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 40;
+      margin-top: 40px;
+      font-family: "Pacifico";
+      color: #2a47d6;
+    }
+
+    /* Carousel */
+    .carousel {
+      max-width: 900px;
+      margin: 30px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Slides */
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img,
+    .slide video {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    /* Arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Description box */
+    .project-details {
+      max-width: 900px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px auto 60px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .project-details h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .project-details p {
+      line-height: 1.6;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="../portfolio.html" class="back-btn">← Back</a>
+
+  <!-- Page Title -->
+  <h2 class="section-title">Project Showcase</h2>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <div class="slide active">
+      <img src="../Sources/MAD (1).png" alt="Slide 1">
+    </div>
+    <div class="slide active">
+      <img src="../Sources/MAD (2).png" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="../Sources/MAD (3).png" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <video controls>
+        <source src="../Sources/MAD_video.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Arrows -->
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+
+  <!-- Description -->
+  <div class="project-details">
+  <h3>About This Project</h3>
+
+  <p><strong>Technology Used:</strong><br>
+    WebzStorms, react native, android studio, android emulator.
+  </p>
+
+  <p><strong>Features:</strong><br>
+    Featuring top marvel movies (imo) using section list for the layout, android toast so when the movie being click it is pop up a message,
+  </p>
+
+  <p><strong>Target Audience:</strong><br>
+    People who enjoys and appreciate movies, users who love to rank which movies are the best
+  </p>
+
+  <p><strong>Challenges Faced:</strong><br>
+    Aligning the text to one side of the card and the image to another side, Ensuring consistentcy in the design for better
+  </p>
+</div>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel .slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      showSlide(slideIndex);
+    }
+    showSlide(slideIndex);
+    setInterval(autoPlay, 4000); // Change slide every 4 seconds
+  </script>
+
+</body>
+</html>
