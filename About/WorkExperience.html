@@ -76,6 +76,12 @@ h1 {
   text-align: center;
   color: white;
   box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.reviews-container:hover {
+  transform: scale(1.05);
 }
 
 /* carousel common styles */
@@ -175,8 +181,9 @@ h1 {
     </div>
   </div>
 
-  <div class="reviews-container">
-    <p>Digital Marketing - TikTok & Instagram posts</p>
+  <div class="reviews-container" onclick="window.location.href='https://www.tiktok.com/@decathlonsg/photo/7541359534510558471?lang=en-GB'">
+    <p>Digital Marketing - TikTok & Instagram post <br>
+      click to view tiktok</p>
     <div class="carousel2">
       <button class="prev">&#10094;</button>
       <div class="carousel2-track">
@@ -215,16 +222,16 @@ const track1 = document.querySelector(".carousel-track");
 const prev1 = document.querySelector(".carousel .prev");
 const next1 = document.querySelector(".carousel .next");
 let index1 = 0;
-next1.onclick = () => { index1 = (index1 + 1) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
-prev1.onclick = () => { index1 = (index1 - 1 + track1.children.length) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
+next1.onclick = (e) => { e.stopPropagation(); index1 = (index1 + 1) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
+prev1.onclick = (e) => { e.stopPropagation(); index1 = (index1 - 1 + track1.children.length) % track1.children.length; track1.style.transform = `translateX(-${index1 * 100}%)`; };
 
 // Second carousel
 const track2 = document.querySelector(".carousel2-track");
 const prev2 = document.querySelector(".carousel2 .prev");
 const next2 = document.querySelector(".carousel2 .next");
 let index2 = 0;
-next2.onclick = () => { index2 = (index2 + 1) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
-prev2.onclick = () => { index2 = (index2 - 1 + track2.children.length) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
+next2.onclick = (e) => { e.stopPropagation(); index2 = (index2 + 1) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
+prev2.onclick = (e) => { e.stopPropagation(); index2 = (index2 - 1 + track2.children.length) % track2.children.length; track2.style.transform = `translateX(-${index2 * 100}%)`; };
 </script>
 
 </body>

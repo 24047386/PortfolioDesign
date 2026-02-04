@@ -154,12 +154,36 @@
       max-width: 100%;
       border-radius: 25px;
       box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+      position: relative;
     }
     .hobbies-img img {
       width: 100%;
       border-radius: 25px;
       object-fit: cover;
+      display: none;
     }
+    .hobbies-img img.active {
+      display: block;
+    }
+    .hobbies-img .prev, .hobbies-img .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      user-select: none;
+      border: none;
+      transition: background 0.2s ease;
+    }
+    .hobbies-img .prev:hover, .hobbies-img .next:hover {
+      background: rgba(0,0,0,0.6);
+    }
+    .hobbies-img .prev { left: 10px; }
+    .hobbies-img .next { right: 10px; }
 
     h3 {
       font-family: "Pacifico";
@@ -236,9 +260,27 @@
       <p>I recieved an <strong> Good Progress Award</strong> in Secondary School Yusof Isyak Secondary School. An award for the top 10% in secondary school level for academic improvement throughout the year and demonstrating good conduct</p>
     </div>
     <div class="hobbies-img">
-      <img src="Sources/hobby-photo.png" alt="Hobby" />
+      <img src="Sources/ITEscholarship.jpeg" alt="ITE Scholarship" class="active" />
+      <img src="Sources/GoodProgress.jpeg" alt="Good Progress Award" />
+      <button class="prev" onclick="changeAchievementSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeAchievementSlide(1)">&#10095;</button>
     </div>
   </section>
+
+  <script>
+    let achievementSlideIndex = 0;
+    const achievementImages = document.querySelectorAll('.hobbies-img img');
+
+    function showAchievementSlide(index) {
+      achievementImages.forEach(img => img.classList.remove('active'));
+      achievementImages[index].classList.add('active');
+    }
+
+    function changeAchievementSlide(n) {
+      achievementSlideIndex = (achievementSlideIndex + n + achievementImages.length) % achievementImages.length;
+      showAchievementSlide(achievementSlideIndex);
+    }
+  </script>
 
 </body>
 </html>
