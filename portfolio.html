@@ -135,6 +135,126 @@
       .project-grid { grid-template-columns: 1fr; } 
       .portfolio-header h1, .portfolio-header p { text-align: center; width: 100%; }
       .portfolio-header { justify-content: center; padding: 40px 20px; }
+      
+      /* Mobile nav adjustments */
+      nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+      }
+      
+      nav img { width: 45px; }
+      
+      nav div {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav a {
+        margin-left: 0;
+        font-size: 14px;
+      }
+      
+      .header {
+        font-size: 36px;
+        width: 100%;
+        padding: 0 20px;
+      }
+      
+      .sub-header {
+        font-size: 16px;
+      }
+      
+      .filters button {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 120px;
+      }
+      
+      .project-card {
+        height: 380px;
+      }
+      
+      .project-card img {
+        height: 150px;
+      }
+      
+      .project-card h4 {
+        font-size: 16px;
+      }
+      
+      .project-card p {
+        font-size: 13px;
+      }
+      
+      .project-card button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 10px;
+      }
+      
+      nav img { width: 40px; }
+      
+      nav a {
+        font-size: 12px;
+      }
+      
+      .header {
+        font-size: 28px;
+      }
+      
+      .sub-header {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      
+      .filters {
+        margin: 20px 10px;
+        gap: 10px;
+      }
+      
+      .filters button {
+        padding: 8px 15px;
+        font-size: 12px;
+        min-width: 100px;
+      }
+      
+      .project-grid {
+        width: 90%;
+        gap: 20px;
+        margin: 30px auto 60px auto;
+      }
+      
+      .project-card {
+        height: 350px;
+        padding: 15px;
+      }
+      
+      .project-card img {
+        height: 130px;
+      }
+      
+      .project-card h4 {
+        font-size: 14px;
+        margin: 10px 0 3px;
+      }
+      
+      .project-card p {
+        font-size: 12px;
+      }
+      
+      .project-card button {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-top: 8px;
+      }
     }
   </style>
 </head>
@@ -212,6 +332,27 @@
     <h4>AR Spaceship Card</h4>
     <p>Description: Designed & built an AR spaceship card...</p>
     <button onclick="window.location.href='Projects/ArCard.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="mobile">
+    <img src="Sources/HomeFoodExpiry.png">
+    <h4>Food Expiry Tracker</h4>
+    <p>Description: Built a mobile app to track food expiry dates...</p>
+    <button onclick="window.location.href='Projects/FoodExpiryTracker.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="mobile">
+    <img src="Sources/Learn@RPpic.png">
+    <h4>Learning@RP</h4>
+    <p>Description: Developed a mobile learning platform...</p>
+    <button onclick="window.location.href='Projects/Learning@RP.html'">More info</button>
+  </div>
+
+  <div class="project-card" data-category="web">
+    <img src="Sources/HifiUI.png">
+    <h4>Sustainability Web</h4>
+    <p>Description: Created a website promoting sustainability...</p>
+    <button onclick="window.location.href='Projects/SustainabilityWeb.html'">More info</button>
   </div>
 
 </section>
