@@ -290,43 +290,49 @@
 
 
   <!-- PROJECT GRID -->
-   <section class="project-grid">
-
-  <div class="project-card" data-category="web">
-    <img src="Sources/Lo-fi.png">
-    <h4>UI UX for portfolio website</h4>
-    <p>Description: Making Hi-fi and lo-fi wireframe...</p>
-    <button onclick="window.location.href='Projects/WebAppPortfolio.html'">More info</button>
-  </div>
-
-  <div class="project-card" data-category="design">
-    <img src="Sources/banner.png">
-    <h4>Travelly Digital Banner</h4>
-    <p>Description: Designed a digital banner...</p>
-    <button onclick="window.location.href='Projects/TravelyBanner.html'">More info</button>
-  </div>
-
-  <div class="project-card" data-category="design">
-    <img src="Sources/instagramgrid.png">
-    <h4>Travelly Instagram Grid</h4>
-    <p>Description: Created Instagram visuals...</p>
-    <button onclick="window.location.href='Projects/TravellyInstagram.html'">More info</button>
-  </div>
-
+<section class="project-grid">
   <div class="project-card" data-category="immersive">
     <img src="Sources/VR.png">
     <h4>VR Escape Room</h4>
     <p>Description: Designed and developed a VR escape room...</p>
     <button onclick="window.location.href='Projects/VrEscapeRoom.html'">More info</button>
   </div>
-
+  <div class="project-card" data-category="mobile">
+    <img src="Sources/Learn@RPpic.png">
+    <h4>Learning@RP</h4>
+    <p>Description: Developed a mobile learning platform...</p>
+    <button onclick="window.location.href='Projects/Learning@RP.html'">More info</button>
+  </div>
   <div class="project-card" data-category="mobile">
     <img src="Sources/MAD (1).png">
     <h4>Mobile App Development</h4>
     <p>Description: Built a sectionList function app...</p>
     <button onclick="window.location.href='Projects/TopMarvelMovies.html'">More info</button>
   </div>
-
+  <div class="project-card" data-category="web">
+    <img src="Sources/HifiUI.png">
+    <h4>Sustainability Web</h4>
+    <p>Description: Created a website promoting sustainability...</p>
+    <button onclick="window.location.href='Projects/SustainabilityWeb.html'">More info</button>
+  </div>
+  <div class="project-card" data-category="design">
+    <img src="Sources/banner.png">
+    <h4>Travelly Digital Banner</h4>
+    <p>Description: Designed a digital banner...</p>
+    <button onclick="window.location.href='Projects/TravelyBanner.html'">More info</button>
+  </div>
+  <div class="project-card" data-category="web">
+    <img src="Sources/Lo-fi.png">
+    <h4>UI UX for portfolio website</h4>
+    <p>Description: Making Hi-fi and lo-fi wireframe...</p>
+    <button onclick="window.location.href='Projects/WebAppPortfolio.html'">More info</button>
+  </div>
+  <div class="project-card" data-category="design">
+    <img src="Sources/instagramgrid.png">
+    <h4>Travelly Instagram Grid</h4>
+    <p>Description: Created Instagram visuals...</p>
+    <button onclick="window.location.href='Projects/TravellyInstagram.html'">More info</button>
+  </div>
   <div class="project-card" data-category="immersive">
     <img src="Sources/Ar card.png">
     <h4>AR Spaceship Card</h4>
@@ -340,21 +346,6 @@
     <p>Description: Built a mobile app to track food expiry dates...</p>
     <button onclick="window.location.href='Projects/FoodExpiryTracker.html'">More info</button>
   </div>
-
-  <div class="project-card" data-category="mobile">
-    <img src="Sources/Learn@RPpic.png">
-    <h4>Learning@RP</h4>
-    <p>Description: Developed a mobile learning platform...</p>
-    <button onclick="window.location.href='Projects/Learning@RP.html'">More info</button>
-  </div>
-
-  <div class="project-card" data-category="web">
-    <img src="Sources/HifiUI.png">
-    <h4>Sustainability Web</h4>
-    <p>Description: Created a website promoting sustainability...</p>
-    <button onclick="window.location.href='Projects/SustainabilityWeb.html'">More info</button>
-  </div>
-
 </section>
 
 <script>
@@ -365,7 +356,7 @@
       const cardCategory = card.getAttribute('data-category');
 
       if (category === "all" || cardCategory === category) {
-        card.style.display = "block";
+        card.style.display = "flex";
       } else {
         card.style.display = "none";
       }
